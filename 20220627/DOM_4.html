@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 이벤트 핸들러
+    이벤트가 발생했을 때 호출될 함수
+    이벤트가 발생했을 때 브라우저에게 이벤트 핸들러의 호출을 위임하는 것
+    -> 이벤트 핸들러 등록 
+
+      이벤트 타입은 이벤트의 종류를 나타내는 문자열
+      마우스 이벤트:
+      click, dbclick, mousedown, mouseup, mousemove
+      mouseenter(마우스 커서를 HTML 요소 안으로 이동했을 때), 
+      mouseleave(마우스 커서를 HTML 요소 밖으로 이동했을 때)
+
+      키보드 이벤트:
+      keydown(모든 키를 눌렀을 때, 문자, 숫자, 특수문자, enter키를 눌렀을 땐 연속실행)
+      keyup(누르고 있던 키를 떼었을 때)
+      -->
+  </head>
+  <body>
+    <!-- 이벤트 핸들러 어트리뷰트 방식 -->
+    <!-- <button onclick="Hi('Lee')">이벤트 핸들러 어트리뷰트 방식</button> -->
+    <button>눌러라</button>
+    <script>
+      /*function Hi(name) {
+        console.log(`안녕? ${name}`);
+      }*/
+      //이벤트 핸들러 프로퍼티 방식
+      //하나의 이벤트 핸들러만 붙일 수 있는 것이 단점
+      const $button = document.querySelector("button");
+      //첫번째로 붙힌 이벤트 핸들러는 두번째로 붙인 이벤트 핸들러에 의해서 재할당이 되어 실행되지 않는다.
+      //   $button.onclick = function () {
+      //     console.log("클릭");
+      //   };
+
+      //   $button.onclick = function () {
+      //     console.log("테스트");
+      //   };
+
+      //addEventListener는 프로퍼티 방식에 아무런 영향을 주지 않는다
+      //또한 동일한 요소에서 발생한 이벤트에 대해 하나 이상의 이벤트 핸들러를 등록할 수 있다.
+
+      //   $button.addEventListener("click", function () {
+      //     console.log("addEventListener 날 클릭해봐 1");
+      //   });
+      //   $button.addEventListener("click", function () {
+      //     console.log("addEventListener 날 클릭해봐 2");
+      //   });
+
+      //참조가 동일한 이벤트 핸들러를 중복으로 등록하면 하나만 등록이 된다.
+      // const handleClick = () => console.log("클릭밍");
+      //$button.addEventListener("click", handleClick);
+      //$button.addEventListener("click", handleClick);
+
+      const handleClick = () => console.log("클릭밍");
+      $button.addEventListener("click", handleClick);
+      //이벤트 핸들러 제거: 제거하고자 하는 기능과 인수가 동일해야 제거됨
+      $button.removeEventListener("click", handleClick);
+    </script>
+  </body>
+</html>

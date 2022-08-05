@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "..\\20220621\\CSS"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "20220622"
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="basketball.js"></script>
+  </head>
+  <body>
+    <div class="div-scoreboard">
+      <div class="scoreboard inner">
+        <div class="div-shots-left">
+          <span>남은 슛 횟수</span>
+          <span id="shot-left">15</span>
+        </div>
+        <div class="div-score">
+          <div class="div-score-name">콤퓨타</div>
+
+          <div id="computer-score" class="div-score-number">0</div>
+        </div>
+        <div class="div-score">
+          <div class="div-score-name">유저</div>
+          <div id="user-score" class="div-score-number">0</div>
+        </div>
+        <div id="text">콤퓨타부터 시작한다.</div>
+      </div>
+    </div>
+    <div class="div-control-panel">
+      <div id="div-computer" class="div-panel">
+        <div class="div-control-name">컴퓨터</div>
+        <button onclick="onComputerShoot()">슛하기</button>
+      </div>
+      <div id="div-user" class="div-panel">
+        <div class="div-control-name">유저</div>
+        <button onclick="on2Shoot()">2shoot</button>
+        <button onclick="on3Shoot()">3shoot</button>
+      </div>
+    </div>
+  </body>
+</html>

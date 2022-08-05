@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="fruits"></ul>
+    <script>
+      const $fruits = document.getElementById("fruits");
+
+      //forEach: 배열의 요소들로 반복작업을 할 때 사용한다.
+      ["apple", "banana", "orange"].forEach((text) => {
+        // 요소 노드 생성
+        const $li = document.createElement("li");
+        // 텍스트 노드 생성
+        const textNode = document.createTextNode(text);
+        $li.appendChild(textNode);
+        $fruits.appendChild($li);
+      });
+    </script>
+  </body>
+</html>

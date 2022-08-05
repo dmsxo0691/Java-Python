@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .red {
+        background-color: red;
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+      }
+      .blue {
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+      }
+      .imges1 {
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+        background-image: url(/imges/2.webp);
+      }
+      .imges2 {
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+        background-image: url(/imges/1.jpg);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+    //이벤트 핸들러 사용
+    //버튼 두개를 만들고
+    //하나는 색을 바꿔주는 버튼
+    //하나는 이미지를 바꿔주는 버튼 -->
+    <button id="color">색 바꾸기</button>
+    <div class="red" id="box"></div>
+
+    <button id="img">이미지 바꾸기</button>
+    <div class="imges1" id="box2"></div>
+
+    <script>
+      const $box = document.getElementById("box");
+      const $colorButton = document.getElementById("color");
+
+      $colorButton.addEventListener("click", function () {
+        if ($box.className == "red") {
+          $box.classList.replace("red", "blue");
+        } else {
+          $box.classList.replace("blue", "red");
+        }
+      });
+
+      const $box2 = document.getElementById("box2");
+      const $imgButton = document.getElementById("img");
+
+      $imgButton.addEventListener("click", function () {
+        if ($box2.className == "imges1") {
+          $box2.classList.replace("imges1", "imges2");
+        } else {
+          $box2.classList.replace("imges2", "imges1");
+        }
+      });
+    </script>
+  </body>
+</html>

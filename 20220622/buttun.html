@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="MNumber">0</div>
+    <div>
+      <button onclick="plus()" id="plus">+</button>
+      <button onclick="minus()" id="minus">-</button>
+    </div>
+
+    <script>
+      let mainNumber = 0;
+
+      function plus() {
+        MNumber.innerHTML = mainNumber;
+        mainNumber += 1;
+      }
+
+      function minus() {
+        MNumber.innerHTML = mainNumber;
+        mainNumber -= 1;
+      }
+
+      //   const plusButtun = document.getElementById("plus");
+      //   plusButtun.addEventListener("click", plus);
+
+      //   const minusButtun = document.getElementById("minus");
+      //   minusButtun.addEventListener("click", minus);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: aliceblue;
+      }
+      .red {
+        color: red;
+      }
+      .blue {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box red">Hello</div>
+    <script>
+      const $box = document.querySelector(".box");
+      console.log($box.className);
+      console.log($box.classList);
+      // .box 요소의 class 어트리뷰트 값에서 'red'만 'blue'로 변경
+      //$box.className = $box.className.replace("red", "blue");
+      $box.classList.replace("red", "blue");
+
+      // 인수로 전달한 1개 이상의 문자열을 class 어트리뷰트 값으로 추가
+      $box.classList.add("foo");
+      console.log($box.classList);
+      // 인수로 전달한 1개 이상의 문자열과 일치하는 class 어트리뷰트에서 제거
+      // 만약에 일치하는 값이 없을 경우 error를 발생시키지 않고 무시
+      $box.classList.remove("foo");
+      console.log($box.classList);
+
+      //   $box.classList.item(0);
+      // 인수로 전달한 인덱스에 해당하는 클래스를 class 어트리뷰트에서 반환한다.
+      console.log($box.classList.item(0));
+      console.log($box.classList.item(1));
+
+      // 인수로 전달한 문자열과 일치하는 클래스가 어트리뷰트에 있는지 비교
+      console.log($box.classList.contains("box"));
+      console.log($box.classList.contains("x"));
+    </script>
+  </body>
+</html>
