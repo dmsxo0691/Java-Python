@@ -1,5 +1,5 @@
 public class Main1 {
-    // 400, 300, 750의 최대공약수를 구하시오
+    // 최대공약수를 구하시오
 
     static int math(int a, int b, int c) {
         int min;
