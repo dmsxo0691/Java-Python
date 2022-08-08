@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class extand {
     // person이라는 부모를 정함
     // 이름 나이 키 몸무게
@@ -50,22 +52,23 @@ public class extand {
     // student 학생이 person에게 상속받아서
     // 학번 학년 학점
     static class student extends person {
-        private int classNum;
+        private String classNum;
         private int classGrade;
         private Double classPoint;
 
-        public student(String name, int age, int height, int weight, int classNum, int classGrade, Double classPoint) {
+        public student(String name, int age, int height, int weight, String studentID, int classGrade,
+                Double classPoint) {
             super(name, age, height, weight);
-            this.classNum = classNum;
+            this.classNum = studentID;
             this.classGrade = classGrade;
             this.classPoint = classPoint;
         }
 
-        public int getClassNum() {
+        public String getClassNum() {
             return classNum;
         }
 
-        public void setClassNum(int classNum) {
+        public void setClassNum(String classNum) {
             this.classNum = classNum;
         }
 
@@ -93,7 +96,7 @@ public class extand {
             System.out.println("몸무게:" + this.getWeight());
             System.out.println("학번:" + this.getClassNum());
             System.out.println("학년:" + this.getClassGrade());
-            System.out.println("학점:" + this.getClassNum());
+            System.out.println("학점:" + this.getClassPoint());
         }
 
     }
@@ -147,11 +150,39 @@ public class extand {
     }
 
     public static void main(String[] args) {
-        student person = new student("홍길동", 20, 175, 80, 20170101, 1, 4.5);
-        student person1 = new student("이순신", 20, 175, 80, 20170101, 1, 4.0);
-        teacher person2 = new teacher("John Doe", 30, 170, 80, 20090505, 3000000, 5);
-        person.sout();
-        person1.sout();
-        person2.sout();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("총 몇명의 학생이 있습니까?");
+        int number = scanner.nextInt();
+        student[] student = new student[number];
+        for (int i = 0; i < number; i++) {
+            String name;
+            int age;
+            int height;
+            int weight;
+            String studentID;
+            int grade;
+            Double gpa;
+
+            System.out.print("학생의 이름을 입력하세요 : ");
+            name = scanner.next();
+            System.out.print("학생의 나이를 입력하세요 : ");
+            age = scanner.nextInt();
+            System.out.print("학생의 키를 입력하세요 : ");
+            height = scanner.nextInt();
+            System.out.print("학생의 몸무게를 입력하세요 : ");
+            weight = scanner.nextInt();
+            System.out.print("학생의 학번을 입력하세요 : ");
+            studentID = scanner.next();
+            System.out.print("학생의 학년을 입력하세요 : ");
+            grade = scanner.nextInt();
+            System.out.print("학생의 학점을 입력하세요 : ");
+            gpa = scanner.nextDouble();
+
+            student[i] = new student(name, age, height, weight, studentID, grade, gpa);
+        }
+
+        for (int i = 0; i < number; i++) {
+            student[i].sout();
+        }
     }
 }
