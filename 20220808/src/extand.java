@@ -2,10 +2,17 @@ public class extand {
     // person이라는 부모를 정함
     // 이름 나이 키 몸무게
     static class person {
-        protected String name;
-        protected int age;
-        protected int height;
-        protected int weight;
+        private String name;
+        private int age;
+        private int height;
+        private int weight;
+
+        public person(String name, int age, int height, int weight) {
+            this.name = name;
+            this.age = age;
+            this.height = height;
+            this.weight = weight;
+        }
 
         public String getName() {
             return name;
@@ -47,17 +54,11 @@ public class extand {
         private int classGrade;
         private Double classPoint;
 
-        student(String name, int age, int height, int weight, int classNum, int classGrade, Double classPoint) {
-            this.name = name;
-            this.age = age;
-            this.height = height;
-            this.weight = weight;
+        public student(String name, int age, int height, int weight, int classNum, int classGrade, Double classPoint) {
+            super(name, age, height, weight);
             this.classNum = classNum;
             this.classGrade = classGrade;
             this.classPoint = classPoint;
-        }
-
-        public student() {
         }
 
         public int getClassNum() {
@@ -97,10 +98,60 @@ public class extand {
 
     }
 
+    static class teacher extends person {
+        private int Num;
+        private int Pay;
+        private int Year;
+
+        public teacher(String name, int age, int height, int weight, int num, int pay, int year) {
+            super(name, age, height, weight);
+            this.Num = num;
+            this.Pay = pay;
+            this.Year = year;
+        }
+
+        public int getNum() {
+            return Num;
+        }
+
+        public void setNum(int num) {
+            Num = num;
+        }
+
+        public int getPay() {
+            return Pay;
+        }
+
+        public void setPay(int pay) {
+            Pay = pay;
+        }
+
+        public int getYear() {
+            return Year;
+        }
+
+        public void setYear(int year) {
+            this.Year = year;
+        }
+
+        void sout() {
+            System.out.println("====================");
+            System.out.println("이름:" + this.getName());
+            System.out.println("나이:" + this.getAge());
+            System.out.println("키:" + this.getHeight());
+            System.out.println("몸무게:" + this.getWeight());
+            System.out.println("학번:" + this.getNum());
+            System.out.println("학년:" + this.getPay());
+            System.out.println("학점:" + this.getYear());
+        }
+    }
+
     public static void main(String[] args) {
         student person = new student("홍길동", 20, 175, 80, 20170101, 1, 4.5);
         student person1 = new student("이순신", 20, 175, 80, 20170101, 1, 4.0);
+        teacher person2 = new teacher("John Doe", 30, 170, 80, 20090505, 3000000, 5);
         person.sout();
         person1.sout();
+        person2.sout();
     }
 }
