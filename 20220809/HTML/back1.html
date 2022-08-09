@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        width: 1200px;
+        height: 300px;
+        border: 1px solid black;
+        margin: 100px auto 0;
+      }
+      section h2 {
+        text-align: center;
+        padding: 20px 0;
+        /* 좌우 중앙정렬 */
+      }
+      .box {
+        width: 200px;
+        height: 150px;
+        border: 1px solid black;
+        float: left;
+        margin-left: 78px;
+      }
+      .box1 {
+        background: url(image1/w1.jpg) no-repeat 0 0;
+        transition: all 0.6s;
+      }
+      .box1:hover {
+        background: url(image1/w1.jpg) no-repeat 0 -150px;
+      }
+      .box2 {
+        background: url(image1/ww2.jpg) no-repeat 0 0;
+        transition: all 0.6s;
+      }
+      .box2:hover {
+        background: url(image1/ww2.jpg) no-repeat -200px 0;
+      }
+      .box3 {
+        background: url(image1/w3.jpg) no-repeat 0 0;
+        position: relative;
+      }
+      .box3 p {
+        position: absolute; /*를 주면 넓이와 높이 값을 지정해주어야 한다*/
+        width: 0;
+        height: 150px;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* rgb 0 0 0이면 검정색 50%의 불투명도 */
+        transition: all 0.6s;
+      }
+      .box3:hover p {
+        width: 200px; /* 100% */
+      }
+      .box4 {
+        background: url(image1/w4.jpg) no-repeat 0 0;
+        position: relative;
+      }
+      .box4 p {
+        position: absolute; /*를 주면 넓이와 높이 값을 지정해주어야 한다*/
+        width: 200px;
+        height: 150px;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: all 0.6s;
+        transform: scale(0);
+      }
+      .box4:hover p {
+        transform: scale(1);
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h2>Best Item</h2>
+      <div class="box box1">박스1</div>
+      <div class="box box2">박스2</div>
+      <div class="box box3">
+        <p>박스3</p>
+      </div>
+      <div class="box box4">
+        <p>박스4</p>
+      </div>
+    </section>
+  </body>
+</html>
