@@ -5,10 +5,6 @@ public class Abstract {
     // 바탕이 되는 조상 클래스로서 중요한 의미를 갖는다. (부모 클래스로 요긴하게 활용 가능)
     // 내가 구현해야 할 메서드들을 누락하지 않을 수 있음
 
-    abstract class tv {
-
-    }
-
     public static void main(String[] args) {
 
     }
