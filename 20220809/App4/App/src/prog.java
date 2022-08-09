@@ -14,6 +14,25 @@ public class prog {
         for (int i = 0; i < arrList.size(); i++) {
             System.out.println(arrList.get(i));
         }
+        System.out.println();
+
+        // arrList의 1번 인덱스를 삭제
+        arrList.remove(1);
+
+        // Enhanced for 문
+        // (int e : arrList) : arrList의 길이만큼 for문 실행
+        for (int e : arrList) {
+            System.out.print(e + " ");
+        }
+        System.out.println();
+
+        arrList.set(0, 20);
+        for (int e : arrList) {
+            System.out.print(e + " ");
+        }
+        System.out.println();
+
+        System.out.println("리스트의 크기 : " + arrList.size());
     }
 }
 // 배열과의 차이점: 배열은 크기가 고정인 반면 ArrayList는 크기가 가변적으로 변함
