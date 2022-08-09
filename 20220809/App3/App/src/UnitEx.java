@@ -1,5 +1,9 @@
 public class UnitEx {
     public static void main(String[] args) {
+
+        // Unit unit = new Unit();
+        // Unit 추상클래스이므로 인스턴스를 생성할 수 없어 에러가 발생함
+
         System.out.println("-------------------------");
         Tank tank = new Tank();
         tank.move(100, 300);
@@ -20,5 +24,14 @@ public class UnitEx {
         dropShip.load();
         dropShip.unload();
         dropShip.stop("드랍쉽", 200, 100);
+
+        System.out.println("-------------------------");
+
+        Granger car = new Granger();
+        car.Start();
+        car.Drive();
+        car.Stop();
+        car.Off();
+
     }
 }
