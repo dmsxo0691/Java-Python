@@ -5,7 +5,7 @@ public interface Dog {
 
     abstract void crying();
 
-    public void show();
+    public void one();
     // 인터페이스에서는 이렇게 어떤 함수가 존재한다는 것만 알려줘야 한다
     // 추상 클래스와 매우 흡사하나 인터페이스는 다중 상속을 구현할 수 있다
 }
