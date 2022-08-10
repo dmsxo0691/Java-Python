@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex-container {
+        background-color: dodgerblue;
+        display: flex;
+        width: 1000px;
+        height: 200px;
+        align-items: center; /* 세로 중앙 정렬 */
+        justify-content: space-around; /* 균등 배열 */
+      }
+      .flex-container > div {
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px; /*줄 간격 = 높이*/
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flexible Boxes</h1>
+    <div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div style="flex-basis: 200px">3</div>
+      <div>4</div>
+    </div>
+  </body>
+</html>
