@@ -21,7 +21,7 @@ public class Main {
             character.show();
         } else if (input == 4) {
             character = new Mag();
-            character.show();3
+            character.show();
         } else if (input == 5) {
             character = new Thi();
             character.show();
