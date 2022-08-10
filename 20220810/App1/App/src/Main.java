@@ -1,9 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        String str = new String("   Java        ");
-        System.out.println("원본 문자열: " + str);
-        System.out.println(str + "|");
-        System.out.println(str.trim() + "|");
+        System.out.println((int) Math.pow(5, 2));
+        System.out.println((int) Math.sqrt(25));
 
     }
 }
