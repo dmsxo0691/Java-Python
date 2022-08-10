@@ -8,6 +8,7 @@ public class Main {
 
         int input = scanner.nextInt();
         Fruit fruit;
+        Character character;
 
         if (input == 1) {
             fruit = new Banana();
@@ -15,6 +16,16 @@ public class Main {
         } else if (input == 2) {
             fruit = new Peach();
             fruit.show();
+        } else if (input == 3) {
+            character = new War();
+            character.show();
+        } else if (input == 4) {
+            character = new Mag();
+            character.show();3
+        } else if (input == 5) {
+            character = new Thi();
+            character.show();
         }
+
     }
 }
