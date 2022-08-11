@@ -1,42 +1,24 @@
-import java.util.Arrays;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        int[] arr1 = { 1, 2, 3, 4, 5 };
-        int[] arr2 = Arrays.copyOf(arr1, 3);
+        File file = new File("test.txt");
+        Scanner scanner;
+        try {
+            scanner = new Scanner(file);
 
-        for (int i = 0; i < arr2.length; i++) {
-            System.out.print(arr2[i] + " ");
+            while (scanner.hasNext()) {
+                System.out.println(scanner.next());
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
-        System.out.println();
 
-        int[] arr3 = Arrays.copyOf(arr1, 10);
-
-        for (int i = 0; i < arr3.length; i++) {
-            System.out.print(arr3[i] + " ");
-        }
-        System.out.println();
-
-        int[] arr4 = Arrays.copyOfRange(arr1, 2, 4);
-
-        for (int i = 0; i < arr4.length; i++) {
-            System.out.print(arr4[i] + " ");
-        }
-        System.out.println();
-
-        int[] arr9 = new int[10];
-        Arrays.fill(arr9, 7);
-        for (int i = 0; i < arr9.length; i++) {
-            System.out.print(arr9[i] + " ");
-        }
-        // 전달받은 모든 요소를 특정값으로 초기화
-        System.out.println();
-
-        int[] arr10 = { 5, 3, 4, 1, 2 };
-
-        Arrays.sort(arr10);
-        for (int i = 0; i < arr10.length; i++) {
-            System.out.print(arr10[i] + " ");
-        }
     }
 }
+// test.txt 파일은 반드시 프로젝트 폴더 최상위에 생성해야 함(src나 패키지 폴더 아님)
+// File 클래스를 이용해 특정 파일을 읽을 수 있도록 스트림 생성
+// File 객체를 Scanner 클래스의 생성자 인자로 전달
+// 파일로부터 데이터가 있을때까지 읽어 출력
