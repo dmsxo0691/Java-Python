@@ -1,0 +1,59 @@
+
+                                        while (Login == true) {
+                                            System.out.println("=========== ATM MENU ===========");
+                                            System.out.println("ID(" + GestList[i].ID + ")| " + GestList[i].Cash + "원");
+                                            System.out.println("1. 입금       | 5. 로그아웃     |");
+                                            System.out.println("2. 출금       | 6. 회원수정     |");
+                                            System.out.println("3. 이체       | 7. 회원탈퇴     |");
+                                            System.out.println("4. 종료");
+                                            System.out.print("** 메뉴를 입력하세요");
+
+                                            select = s.nextInt();
+
+                                            switch (select) {
+                                                case 1:
+                                                    while (true) {
+                                                        System.out.print("\n입금할 금액을 입력하세요 : ");
+                                                        long currentDeposit = s.nextLong();
+
+                                                        if (currentDeposit >= 1) {
+                                                            GestList[i].Cash += currentDeposit;
+                                                            break;
+                                                        } else {
+                                                            System.out.println("(경고) 1원 이상의 금액을 입력하세요. \n");
+                                                        }
+                                                    }
+                                                    System.out.println("입금이 완료되었습니다.");
+
+                                                    // 현재의 잔액 표시
+                                                    System.out.println("\n현재 잔액 : " + GestList[i].Cash + "원 \n");
+                                                    break;
+
+                                                case 2:
+                                                    System.out.println("\n현재 잔액 : " + GestList[i].Cash + "원 \n");
+
+                                                    // 잔액이 없을 시
+                                                    if (GestList[i].Cash == 0) {
+                                                        System.out.println("(경고) 잔액이 없습니다. \n");
+                                                    } else {
+                                                        while (true) {
+                                                            System.out.println("\n출금할 금액을 입력하세요(0:빠져나가기) : ");
+                                                            long currentDeposit = s.nextLong();
+
+                                                            if (currentDeposit < 0) {
+                                                                System.out.println("(경고) 마이너스 단위는 출금할 수 없습니다.");
+                                                            } else if (currentDeposit == 0) {
+                                                                System.out.println("(경고) 출금 절차를 종료합니다. \n");
+                                                                break;
+                                                            } else if (currentDeposit > GestList[i].Cash) {
+                                                                System.out.println("(경고) 잔액보다 많은 금액을 출금할 수 없습니다.");
+                                                            } else {
+                                                                GestList[i].Cash -= currentDeposit;
+                                                                System.out.println("출금이 완료되었습니다.");
+                                                                System.out.println(
+                                                                        "\n현재 잔액: " + GestList[i].Cash + "원 \n");
+                                                                break;
+                                                            }
+                                                        } // while 끝
+                                                    }
+                                                    break;
