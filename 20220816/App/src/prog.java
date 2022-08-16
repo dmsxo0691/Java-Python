@@ -37,11 +37,17 @@ public class prog {
         System.out.println();
 
         Collections.sort(arrList);
+        // Collections 클래스일 뿐임, Collection 과 무관함 - Collection : 최상위 인터페이스니 주의 요망
         // List, Set, Map에서 배열을 정렬할 때 사용함.
         Iterator<Integer> iter = arrList.iterator();
         while (iter.hasNext()) {
             System.out.print(iter.next() + " ");
         }
+        // Iterator 는 자바 컬렉션 프레임 워크에서 컬렉션에 저장되어 있는 요소를 읽어오는 표준 방법
+        // iter.hasNext() 읽어온 요소가 남아있는지 확인하는 메소드, 있으면 true 없으면 false
+        System.out.println();
+
+        System.out.println("리스트의 크기: " + arrList.size());
 
     }
 
