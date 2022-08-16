@@ -8,7 +8,7 @@ public class stack {
         // Deque<Integer> st = new ArrayDeque<Integer>();
         // LIFO - 라스트 인 퍼스트 아웃
 
-        // push() 메소들르 이용한 요소의 저장
+        // push() 메소드를 이용한 요소의 저장
         st.push(4);
         st.push(2);
         st.push(3);
@@ -20,7 +20,7 @@ public class stack {
         System.out.println(st);
 
         System.out.println(st.pop());
-        // 제일 마지막으로 저장된 요소 삭제(제일 상단)
+        // 제일 마지막으로 저장된 요소 반환 및 삭제(제일 상단)
         System.out.println(st);
 
     }
