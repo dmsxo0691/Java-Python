@@ -12,5 +12,15 @@ public class queue {
         // peek() 메소드를 이용한 요소의 반환
         System.out.println(qu.peek());
         System.out.println(qu);
+
+        // poll() 메소드를 이용한 요소의 반환 및 제거
+
+        // FIOF 퍼스트 인 퍼스트 아웃
+        System.out.println(qu.poll());
+        System.out.println(qu);
+
+        // remobe() 메소드를 이용한 요소 제거
+        qu.remove("하나");
+        System.out.println(qu);
     }
 }
