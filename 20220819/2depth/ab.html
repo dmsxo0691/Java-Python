@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .bigbox {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .face {
+        width: 500px;
+        height: 450px;
+        box-sizing: border-box;
+        /* padding, border 포함 넓이 */
+        border: 5px solid black;
+        margin-top: 50px;
+        border-radius: 50%;
+        background-color: #d59729;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="bigbox">
+      <div class="face"></div>
+    </div>
+  </body>
+</html>
