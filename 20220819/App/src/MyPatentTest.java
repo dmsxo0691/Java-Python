@@ -1,4 +1,3 @@
-import javax.sound.sampled.SourceDataLine;
 
 class MyParent {
     private int prv; // 같은 클래스만 접근 가능
