@@ -13,6 +13,10 @@ public class B {
         System.out.println(a1.m);
         System.out.println(a2.m);
 
+        a1.n = 7;
+        a2.n = 8;
+        System.out.println(a1.n);
+        System.out.println(a2.n);
     }
 }
 // Static member 정적 멤버의 특징
