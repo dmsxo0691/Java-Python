@@ -36,6 +36,8 @@ public class TimeTest {
         Time t = new Time();
         t.setHour(21);
         System.out.println(t.getHour());
+        t.setHour(100); // 유효성 검사에 의해 hour값에 할당되지 않음
+        System.out.println(t.getHour());
 
     }
 }
