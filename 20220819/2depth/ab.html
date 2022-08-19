@@ -21,47 +21,15 @@
       }
       .face {
         width: 500px;
-        height: 450px;
+        height: 500px;
         box-sizing: border-box;
         /* padding, border 포함 넓이 */
         border: 10px solid black;
         border-radius: 50%;
-        background-color: #d59729;
+        background-color: #1fb2df;
         position: absolute;
         bottom: 0;
         /* 밑줄 맞추기 */
-      }
-      .ear {
-        background-color: #d59729;
-        width: 150px;
-        height: 150px;
-        border: 10px solid black;
-        border-radius: 50%;
-        position: absolute;
-        box-sizing: border-box;
-        top: 20px;
-      }
-      .ear.left {
-        left: 30px;
-      }
-      .ear.right {
-        right: 30px;
-      }
-
-      .eyebrow {
-        width: 100px;
-        height: 15px;
-        border: 1px solid black;
-        border-radius: 7px;
-        background-color: black;
-        position: absolute;
-        top: 120px;
-      }
-      .eyebrow.left {
-        left: 90px;
-      }
-      .eyebrow.right {
-        right: 90px;
       }
 
       .eyeball {
@@ -85,62 +53,77 @@
         background-color: black;
         border-radius: 50%;
         position: absolute;
-        top: 230px;
+        top: 250px;
         left: 50%;
         transform: translate(-50%, 0);
         z-index: 1;
       }
 
       .mouth {
-        width: 80px;
-        height: 74px;
-        border: 10px solid black;
+        width: 100px;
+        height: 80px;
+        border: 5px solid black;
         box-sizing: border-box;
         border-radius: 50%;
         background-color: white;
         position: absolute;
-        top: 240px;
+        top: 280px;
       }
       .mouth.left {
-        left: 170px;
+        left: 160px;
+        transform: rotate(-45deg);
       }
       .mouth.right {
-        right: 170px;
-      }
-
-      .mouth_cover {
-        width: 37px;
-        height: 40px;
-        background-color: white;
-        top: 2px;
-        position: absolute;
+        right: 160px;
         transform: rotate(45deg);
       }
-      .mouth_cover.left {
-        left: 30px;
+
+      line {
+        width: 160px;
+        height: 3px;
+        background-color: black;
+        top: 50px;
+        left: 100px;
+        position: absolute;
       }
-      .mouth_cover.right {
-        right: 53px;
+      .line1 {
+        /* transform-origin: right center; */
+        transform: rotate(20deg);
+      }
+      .line2 {
+        top: 100px;
+      }
+      .line3 {
+        top: 150px;
+        /* transform-origin: right center; */
+        transform: rotate(20deg);
+      }
+      .box {
+        width: 200px;
+        width: 200px;
+        position: absolute;
+        left: 100px;
+        top: 100px;
       }
     </style>
   </head>
 
   <body>
     <div class="bigbox">
-      <div class="ear left"></div>
-      <div class="ear right"></div>
       <div class="face">
-        <div class="eyebrow left"></div>
-        <div class="eyebrow right"></div>
         <div class="eyeball left"></div>
         <div class="eyeball right"></div>
         <div class="nose"></div>
-        <div class="mouth left">
-          <div class="mouth_cover left"></div>
+        <div class="mouth left"></div>
+        <div class="mouth right"></div>
+        <div class="box">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
         </div>
-        <div class="mouth right">
-          <div class="mouth_cover right"></div>
-        </div>
+        <div class="line line4"></div>
+        <div class="line line5"></div>
+        <div class="line line6"></div>
       </div>
     </div>
   </body>
