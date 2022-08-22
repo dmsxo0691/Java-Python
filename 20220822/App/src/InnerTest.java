@@ -15,6 +15,8 @@ public class InnerTest {
     public static void main(String[] args) {
         // BBB b = new BBB();
         // b.method();
-
+        AAA a = new AAA();
+        AAA.BBB b = a.new BBB();
+        b.method();
     }
 }
