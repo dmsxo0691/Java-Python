@@ -2,9 +2,11 @@ class Insect {
     void Attack() {
         System.out.println("곤충은 공격을 한다");
     }
+    // 부모클래스로 정의
 }
 
 class Anonymous {
+    // 방법1 : 필드에 익명자식 객체를 생성
     Insect spider1 = new Insect() {
         String name = "무당거미";
 
@@ -14,6 +16,7 @@ class Anonymous {
         }
     };
 
+    // 방법2 : 로컬 변수의 초기값으로 대입
     void method1() {
         Insect spider2 = new Insect() {
             String name = "늑대거미";
@@ -26,6 +29,7 @@ class Anonymous {
         spider2.Attack();
     }
 
+    // 방법3 : 익명개체를 매개변수로 대입
     void method2(Insect spider) {
         spider.Attack();
     }
