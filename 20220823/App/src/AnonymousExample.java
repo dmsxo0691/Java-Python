@@ -25,8 +25,25 @@ class Anonymous {
         };
         spider2.Attack();
     }
+
+    void method2(Insect spider) {
+        spider.Attack();
+    }
 }
 
 public class AnonymousExample {
+    public static void main(String[] args) {
+        Anonymous a = new Anonymous();
+        a.spider1.Attack();
+        a.method1();
+        a.method2(new Insect() {
+            String name = "타란튤라";
 
+            @Override
+            void Attack() {
+                System.out.println(name + " : 공격하지 않고 후퇴");
+            }
+        });
+        a.spider1.Attack();
+    }
 }
