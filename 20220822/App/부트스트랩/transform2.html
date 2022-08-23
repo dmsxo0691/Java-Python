@@ -16,6 +16,15 @@
             $(".tra").addClass("on");
           }
         });
+
+        $(".btn2").click(function () {
+          //   $(".tra").toggleClass("on");
+          if ($(".rot2").hasClass("on")) {
+            $(".rot2").removeClass("on");
+          } else {
+            $(".rot2").addClass("on");
+          }
+        });
       });
     </script>
     <title>transform</title>
@@ -61,7 +70,7 @@
         transform: rotateY(0deg);
         transition: all 0.5s;
       }
-      .btn3:hover + .rot2 {
+      .rot2.on {
         transform: rotateY(360deg);
       }
 
@@ -111,7 +120,7 @@
     <p><button class="btn1">나와라</button></p>
     <h1 class="tra">나왔다왜!!</h1>
 
-    <p class="btn2">돌아라</p>
+    <p><button class="btn2">돌아라</button></p>
     <h1 class="rot1">선풍기처럼돌아라</h1>
 
     <p class="btn3">돌아라</p>
