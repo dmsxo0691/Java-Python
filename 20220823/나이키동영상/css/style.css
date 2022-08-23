@@ -95,7 +95,7 @@ header {
 /* 2차메뉴 스타일 */
 #gnb li ul {
   position: absolute;
-  left: 0;
+  left: 200px;
   top: 0;
   opacity: 0;
   visibility: hidden;

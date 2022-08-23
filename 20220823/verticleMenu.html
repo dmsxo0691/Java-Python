@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: arial;
+        font-size: 12px;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      #navi {
+        width: 200px;
+        margin: 20px auto 0;
+        text-align: center;
+      }
+      #navi > li > a {
+        display: block;
+        height: 36px;
+        background-color: #390;
+        line-height: 36px;
+        border-top: 1px dotted #fff;
+        color: #fff;
+      }
+      #navi .sub li {
+        background-color: #cf9;
+      }
+      #navi .sub li a {
+        display: block;
+        line-height: 36px;
+        height: 36px;
+        color: #222;
+      }
+      #navi .sub li a:hover {
+        background-color: #cf0;
+      }
+      #navi .sub {
+        /* display: none; */
+      }
+      #navi li:nth-child(1) ul {
+        /* display: block; */
+      }
+    </style>
+    <script>
+      $(function () {
+        // $(".sub").css("display", "none");
+
+        // 1번 방법
+        // $("#navi li ul").css("display", "none");
+        // $("#navi li:nth-child(1) ul").css("display", "block");
+
+        // 2번 방법
+        $("#navi li ul").hide();
+        $("#navi li:eq(0) ul").show(); // $("#navi li:first ul").show();
+
+        // 3번 방법
+        // $("#navi li:eq(0)").siblings("li").find("sub").hide();
+        // #navi li중 첫번째를 제외한 li형제들의 .sub를 찾아 가린다.
+
+        // 4번 방법
+        // $("#navi li:not(:first)ul").hide();
+
+        $("#navi > li > a").click(function () {
+          var kkk = $(this).next(".sub").css("display");
+          //현재 클릭한 다음에 있는 sub가 none인지, block 인지 확인후 kkk에 저장
+          //   alert(kkk); 알럿으로 확인
+          if (kkk == "none") {
+            $(".sub").slideUp();
+            $(this).next(".sub").slideDown();
+          } else {
+            $(".sub").slideUp();
+          }
+          return false;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <ul id="navi">
+      <li>
+        <a href="">Mainmenu1</a>
+        <ul class="sub">
+          <li><a href="#">sub1</a></li>
+          <li><a href="#">sub2</a></li>
+          <li><a href="#">sub3</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="">Mainmenu2</a>
+        <ul class="sub">
+          <li><a href="#">Sub1</a></li>
+          <li><a href="#">Sub2</a></li>
+          <li><a href="#">Sub3</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="">Mainmenu3</a>
+        <ul class="sub">
+          <li><a href="#">subone</a></li>
+          <li><a href="#">subtwo</a></li>
+          <li><a href="#">subthree</a></li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>
