@@ -17,6 +17,8 @@ public class Example1 {
         return math.sum(10, 20);
     }
 
+    // Example과 동일한 내용 구현, 한번만 사용되는 객체를 만들기 위해 클래스를
+    // 구현하지 않아도 된다. 그러힉 때문에 익명 객체는 클래스 이름이 없다.
     public static void main(String[] args) {
         int result = doSomething(new Math() { // Anonymous funtion
 
