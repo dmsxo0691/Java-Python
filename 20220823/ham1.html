@@ -66,9 +66,9 @@
       .map {
         display: none;
       }
-      /* .map ul li.show {
+      .show {
         display: block;
-      } */
+      }
     </style>
     <script>
       $(function () {
@@ -85,13 +85,13 @@
 
           return false;
         });
-        $(".map ul").click(function () {
+        $("#Map li").click(function () {
           var kkk = $(this).next().css("display");
           if (kkk == "none") {
-            $(".map ul li").slideUp();
-            $(this).next().slideDown();
+            $(".map").addClass("show");
+            $(this).next().removeClass("show");
           } else {
-            $(".map ul li").slideUp();
+            $(".map").removeClass("show");
           }
           return false;
         });
@@ -104,7 +104,7 @@
       <p class="ham">메뉴바</p>
     </header>
     <nav>
-      <ul>
+      <ul id="Map">
         <li>회사소개</li>
         <ul>
           <li class="map">으</li>
