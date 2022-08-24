@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+      }
+      @media screen and (max-width: 600px) {
+        /* 스마트폰 미디어쿼리 */
+        .box {
+          background-color: aliceblue;
+        }
+      }
+      @media screen and (min-width: 601px) and (max-width: 1023px) {
+        /* 스마트패드 미디어쿼리 */
+        .box {
+          background-color: rgb(224, 87, 87);
+        }
+      }
+      @media screen and (min-width: 1024px) {
+        /* pc용 미디어쿼리 */
+        .box {
+          background-color: rgb(49, 177, 37);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box1">박스</div>
+  </body>
+</html>
