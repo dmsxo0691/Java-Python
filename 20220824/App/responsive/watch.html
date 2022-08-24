@@ -13,49 +13,71 @@
       }
     </style>
     <script>
-      setInterval(function () {
-        var today = new Date();
-        var y = today.getFullYear();
-        var m = today.getMonth() + 1;
-        var d = today.getDate();
-        var n = today.getDay();
-        var yoil;
-        if (n == "0") {
-          yoil = "일";
-        } else if (n == "1") {
-          yoil = "월";
-        } else if (n == "2") {
-          yoil = "화";
-        } else if (n == "3") {
-          yoil = "수";
-        } else if (n == "4") {
-          yoil = "목";
-        } else if (n == "5") {
-          yoil = "금";
-        } else {
-          yoil = "토";
+      window.onload = function () {
+        //html 과 css가 모두 로드된 후 실행
+        setInterval(time, 1000);
+        //1초마다 time 이라는 함수를 호출
+        function time() {
+          var today = new Date();
+          var y = today.getFullYear();
+          var m = today.getMonth() + 1;
+          var d = today.getDate();
+          var n = today.getDay();
+          var yoil;
+          if (n == "0") {
+            yoil = "일";
+          } else if (n == "1") {
+            yoil = "월";
+          } else if (n == "2") {
+            yoil = "화";
+          } else if (n == "3") {
+            yoil = "수";
+          } else if (n == "4") {
+            yoil = "목";
+          } else if (n == "5") {
+            yoil = "금";
+          } else {
+            yoil = "토";
+          }
+          var h = today.getHours();
+          var m1 = today.getMinutes();
+          var s = today.getSeconds();
+
+          document.getElementById("year").innerHTML = y;
+          document.getElementById("month").innerHTML = m;
+          document.getElementById("date").innerHTML = d;
+          document.getElementById("nday").innerHTML = yoil;
+          document.getElementById("hour").innerHTML = h;
+          document.getElementById("minute").innerHTML = m1;
+          document.getElementById("second").innerHTML = s;
+
+          //$("#second").text(s);
+          //   document.write(
+          //     y +
+          //       "년 " +
+          //       m +
+          //       "월 " +
+          //       d +
+          //       "일 " +
+          //       yoil +
+          //       "요일 " +
+          //       h +
+          //       "시 " +
+          //       m1 +
+          //       "분 " +
+          //       s +
+          //       "초<br/>"
+          //   );
         }
-        var h = today.getHours();
-        var m1 = today.getMinutes();
-        var s = today.getSeconds();
-        document.write(
-          y +
-            "년 " +
-            m +
-            "월 " +
-            d +
-            "일 " +
-            yoil +
-            "요일 " +
-            h +
-            "시 " +
-            m1 +
-            "분 " +
-            s +
-            "초<br/>"
-        );
-      }, 1000);
+      };
     </script>
   </head>
-  <body></body>
+  <body>
+    <h1>
+      <span id="year">0000</span> 년 <span id="month">00</span> 월
+      <span id="date">00</span> 일 <span id="nday">0</span>요일
+      <span id="hour">00</span> 시 <span id="minute">00</span> 분
+      <span id="second">00</span> 초
+    </h1>
+  </body>
 </html>
