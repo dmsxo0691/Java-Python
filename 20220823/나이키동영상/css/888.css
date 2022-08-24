@@ -76,7 +76,7 @@ header {
   height: 50px;
   font: bold 18px/3 play;
   color: #222;
-  text-align: right;
+  text-align: left;
   padding-right: 40px;
   box-sizing: border-box;
   /* padding 포함 220px */
@@ -116,6 +116,22 @@ header {
   transition: all 0.6s;
   border-bottom: 1px solid #69fb05;
 }
+#gnb > li > ul > li > a {
+  display: block;
+  width: 220px;
+  height: 40px;
+  background-color: #222;
+  border-bottom: 1px solid #6fc8c7;
+  font-size: 16px;
+  line-height: 2.5;
+  font-weight: bold;
+  font-family: arial;
+  color: #fff;
+  margin-bottom: 3px;
+  padding-left: 50px;
+  box-sizing: border-box;
+  transition: all 0.6s;
+}
 
 /* 2차 메뉴 호버 시 스타일 */
 #gnb li:hover ul {
@@ -141,7 +157,7 @@ header {
 /* sns 버튼(웹폰트 아이콘) 스타일 */
 #sns .fa {
   font-size: 25px;
-  color: #b6fb05;
+  color: #333;
   opacity: 0.6;
   transition: all 0.6s;
 }
