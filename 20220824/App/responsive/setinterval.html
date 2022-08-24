@@ -16,12 +16,15 @@
       //setinterval () 메서드는 코드를 일정시간 간격으로 반복실행함
       var addNum = 0;
 
-      setInterval(function () {
+      var auto_1 = setInterval(function () {
         addNum++;
         console.log(addNum);
-        document.write(addNum + "<br/>");
+        // document.write(addNum + "<br/>");
       }, 1000);
     </script>
   </head>
-  <body></body>
+  <body>
+    <h1>일정 시간 간격으로 값 증가</h1>
+    <button onclick="clearInterval(auto_1)">증가정지</button>
+  </body>
 </html>
