@@ -1,3 +1,6 @@
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Random;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -16,5 +19,10 @@ public class prog5 {
 
         Stream<Integer> stream2 = Stream.iterate(100, n -> n + 10).limit(5);
         stream2.forEach(System.out::println);
+
+        // Stream<String> stream3 = Files.lines(Paths.get("test.txt"),
+        // Charset.forName("UTF-8"));
+        // 'test.txt' 파일의 데이터를 라인 단위로 읽어서 출력하는 스트림 객체
+        // 이때, 데이터는 'UTF-8'로 디코딩해서 읽어들인다.
     }
 }
