@@ -127,15 +127,7 @@ header #gnb > li > a {
   box-sizing: border-box;
   transition: all 0.6s;
 }
-/* 2차 메뉴 호버 시 스타일 */
-/* #gnb li:hover ul {
-  left: 220px;
-  opacity: 1;
-  visibility: visible;
-}
- #gnb li:hover ul > a {
-  display: block;
-} */
+
 #gnb ul a:hover {
   background-color: #82d4d4;
   color: #333;

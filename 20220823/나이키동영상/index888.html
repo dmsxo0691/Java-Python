@@ -26,6 +26,14 @@
           }
           return false;
         });
+        $("#side").click(function () {
+          var kkk = $(this).hasClass("on");
+          if (kkk == true) {
+            $(this).addClass("on");
+          } else {
+            $(this).removeClass("on");
+          }
+        });
       });
     </script>
   </head>
