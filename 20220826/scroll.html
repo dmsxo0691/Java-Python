@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      article {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+      }
+      #article1 {
+        background-color: burlywood;
+      }
+      #article2 {
+        background-color: coral;
+      }
+      #article3 {
+        background-color: darkcyan;
+      }
+      #article4 {
+        background-color: darksalmon;
+      }
+      h2 {
+        font-size: 50px;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        height: 100px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.5);
+        z-index: 10;
+      }
+      nav ul {
+        width: 1000px;
+        height: 100px;
+        margin: 0 auto;
+        list-style: none;
+      }
+      nav ul li {
+        float: left;
+      }
+      nav ul li a {
+        display: block;
+        width: 250px;
+        height: 100px;
+        line-height: 100px;
+        font-size: 32px;
+        color: #000;
+        text-align: center;
+      }
+    </style>
+    <script>
+      $(function () {
+        var a0 = $("section > article").eq(0).offset().top;
+        var a1 = $("section > article").eq(1).offset().top;
+        var a2 = $("section > article").eq(2).offset().top;
+        var a3 = $("section > article").eq(3).offset().top;
+
+        console.log(a0, a1, a2, a3);
+        $(window).scroll(function () {
+          var sct = $(this).scrollTop(); //스크롤 위치값을 sct에 저장
+          $("#Stop").text(sct);
+          //   위 행과 동일 document.getElementById(Stop).innerHTML = sct;
+          $("nav ul li").click(function () {
+            var i = $(this).index(); // 클릭한 메뉴의 인덱스 번호를 구한다
+            var offset_t = $("section > article").eq(i).offset().top;
+            // alert(offset_t);
+            $("html, body").stop().animate({ scrollTop: offset_t }, 1300);
+            return false; //a 링크 금지
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#article1">회사소개</a></li>
+        <li><a href="#article2">제품소개</a></li>
+        <li><a href="#article3">커뮤니티</a></li>
+        <li><a href="#article4">다운로드</a></li>
+      </ul>
+    </nav>
+    <section>
+      <article id="article1"></article>
+      <article id="article2">
+        <div class="left1">
+          <h1>은태씨</h1>
+          <p>지금</p>
+        </div>
+        <div class="right1">
+          <h1>에고</h1>
+          <p>점심도</p>
+        </div>
+      </article>
+      <article id="article3"></article>
+      <article id="article4"></article>
+    </section>
+    <h2>현재스크롤위치 : <span id="Stop">000</span></h2>
+  </body>
+</html>
