@@ -35,7 +35,7 @@ body {
 .vid video {
   width: 100%;
   min-width: 1920px;
-  position: relative;
+  position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -63,7 +63,7 @@ header {
   width: 220px;
   position: absolute;
   right: 0;
-  top: 150px;
+  bottom: 150px;
   z-index: 10;
 }
 
@@ -179,7 +179,7 @@ header #gnb > li > a {
   position: fixed;
   top: 40px;
   left: 40px;
-  z-index: 10;
+  z-index: 2;
   width: 280px;
 }
 .logo img {

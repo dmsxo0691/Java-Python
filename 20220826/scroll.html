@@ -31,6 +31,42 @@
       #article4 {
         background-color: darksalmon;
       }
+      .s4_cover {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 900px;
+        margin-left: -450px;
+        height: 200px;
+        text-align: center;
+        border: 1px solid red;
+      }
+      .s4_cover > div {
+        float: left;
+        background-color: rgba(255, 255, 255, 0.7);
+        width: 200px;
+        padding: 30px 0;
+        margin-top: 70px;
+        margin-left: 20px;
+        opacity: 0;
+        transition: all 0.8s;
+      }
+      .s4_cover > div.active {
+        margin-top: 0;
+        opacity: 1;
+      }
+      .s4_cover > div.s4_1 {
+        transition: all 0.8s;
+      }
+      .s4_cover > div.s4_2 {
+        transition: all 0.8s 0.4s;
+      }
+      .s4_cover > div.s4_3 {
+        transition: all 0.8s 0.8s;
+      }
+      .s4_cover > div.s4_4 {
+        transition: all 0.8s 1.2s;
+      }
       h2 {
         font-size: 50px;
         position: fixed;
@@ -64,6 +100,30 @@
         color: #000;
         text-align: center;
       }
+      .left1 {
+        padding: 50px;
+        position: absolute;
+        text-align: center;
+        background-color: wheat;
+        top: 50px;
+        left: -350px;
+        transition: all 0.3;
+      }
+      .right1 {
+        padding: 50px;
+        position: absolute;
+        text-align: center;
+        background-color: wheat;
+        bottom: 50px;
+        right: -350px;
+        transition: all 0.3;
+      }
+      .right1.on {
+        right: 100px;
+      }
+      .left1.on {
+        left: 100px;
+      }
     </style>
     <script>
       $(function () {
@@ -77,13 +137,23 @@
           var sct = $(this).scrollTop(); //스크롤 위치값을 sct에 저장
           $("#Stop").text(sct);
           //   위 행과 동일 document.getElementById(Stop).innerHTML = sct;
-          $("nav ul li").click(function () {
-            var i = $(this).index(); // 클릭한 메뉴의 인덱스 번호를 구한다
-            var offset_t = $("section > article").eq(i).offset().top;
-            // alert(offset_t);
-            $("html, body").stop().animate({ scrollTop: offset_t }, 1300);
-            return false; //a 링크 금지
-          });
+          if (sct >= 450) {
+            $(".left1").addClass("on");
+          }
+          if (sct >= 900) {
+            $(".right1").addClass("on");
+          }
+          if (sct >= 2300) {
+            $(".s4_cover div").addClass("active");
+          }
+        });
+        $("nav ul li").click(function () {
+          var i = $(this).index(); // 클릭한 메뉴의 인덱스 번호를 구한다
+          var offset_t = $("section > article").eq(i).offset().top;
+          // alert(offset_t);
+          $("html, body").stop().animate({ scrollTop: offset_t }, 1300);
+
+          return false; //a 링크 금지
         });
       });
     </script>
@@ -110,7 +180,26 @@
         </div>
       </article>
       <article id="article3"></article>
-      <article id="article4"></article>
+      <article id="article4">
+        <div class="s4_cover">
+          <div class="s4_1">
+            <h1>HTML</h1>
+            <p>어렵지 않다.</p>
+          </div>
+          <div class="s4_2">
+            <h1>CSS</h1>
+            <p>내 취미는 아니다.</p>
+          </div>
+          <div class="s4_3">
+            <h1>JAVA</h1>
+            <p>뭔말인지 모르겠다.</p>
+          </div>
+          <div class="s4_4">
+            <h1>Jsp</h1>
+            <p>재미있을 것 같다.</p>
+          </div>
+        </div>
+      </article>
     </section>
     <h2>현재스크롤위치 : <span id="Stop">000</span></h2>
   </body>
