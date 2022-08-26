@@ -12,6 +12,8 @@ public class prog13 {
 
         Optional<String> result1 = stream1.reduce((s1, s2) -> s1 + "++" + s2);
         result1.ifPresent(System.out::println);
+        // Optional 을 사용하면 예상치 못한 NULLpointerException 예외를 제공하는 메소드로 간단히 회피
+        // ifPresent() 메소드 : Optional 객체가 값을 가지고 있으면 실행, 갑이 없으면 넘어감
 
         String result2 = stream2.reduce("시작", (s1, s2) -> s1 + "++" + s2);
         System.out.println(result2);
