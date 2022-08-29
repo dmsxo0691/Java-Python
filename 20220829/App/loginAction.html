@@ -17,14 +17,14 @@
   </head>
   <body>
     <!-- 이클립스 서식 
-        <% UserDAO userDAO = new UserDAO; int result =
-    userDAO.login(user.getUserID(), user.getUserPassword()); if(result == 1){
-    PrintWriter script = response.getWriger(); script.println("
-    <script>
-      ");
-          script.println("alert('로그인 성공')");
-          script.println("location.href='main.jsp");
-          script.println("</script>"); } %> 
+        <% UserDAO userDAO = new UserDAO; 
+        int result = userDAO.login(user.getUserID(), user.getUserPassword()); 
+    if(result == 1){
+            PrintWriter script = response.getWriger(); 자바 스크립트 문장을 실행
+            script.println("<script>");
+            script.println("alert('로그인 성공')");
+            script.println("location.href='main.jsp");
+            script.println("</script>"); } %> 
         } else if(result == 0){
 			PrintWriter script = response.getWriger();
 			script.println("<script>");
