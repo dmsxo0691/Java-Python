@@ -346,5 +346,23 @@
       </a>
       <p>Bootstrap theme Made by <a href="#" title="Visit kangNamit"></a></p>
     </footer>
+    <script>
+      $(".navbar a").click(function () {
+        var hash = this.hash;
+        // alert(hash); a href = 의 값을 구해준다
+        $("html,body").animate({ scrollTop: $(hash).offset().top }, 900);
+        return false;
+      });
+      $(window).scroll(function () {
+        $(".slideanim").each(function () {
+          var pos = $(this).offset().top;
+          // console.log(pos);
+          var sct = $(window).scrollTop();
+          if (pos < sct + 600) {
+            $(this).addClass("slide");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
