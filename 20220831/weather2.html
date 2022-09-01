@@ -37,7 +37,6 @@
             `<img src="http://openweathermap.org/img/wn/${$wIcon}@2x.png">`
           );
 
-          $("h2").prepend($cDate); // 앞에 추가
           var $now = new Date();
           var $cDate =
             $now.getFullYear() +
@@ -47,8 +46,9 @@
             $now.getDate() +
             " " +
             $now.getHours() +
-            " : " +
-            $new.getMinutes();
+            ":" +
+            $now.getMinutes();
+          $("h2").prepend($cDate); // 앞에 추가
         }
       );
     </script>
