@@ -30,7 +30,14 @@
         url: apiURI,
         dataType: "json",
         type: "GET",
-        success: function (resp) {},
+        success: function (resp) {
+          var $Icon = resp.weather[0].icon.substr(0, 2);
+          var $Temp = Math.floor(resp.main.temp) + "º";
+          var $city = resp.name;
+          $(".currIcon").append(' <i class="' + weatherIcon[$Icon] + ' "></i>');
+          $(".currTemp").prepend($Temp);
+          $(".city").append($city);
+        },
       });
     </script>
     <style>
