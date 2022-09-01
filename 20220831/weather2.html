@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+      //   $.getJSON("demo_ajax_json.js", function (result) {
+      //     $.each(result, function (i, field) {
+      //       $("div").append(field + " ");
+      //     });
+      //   });
+
+      //   $.getJSON("날씨 파일 경로", function (data) {
+      //     data가 할일
+      //   });
+
+      //forecast - 예보 / Weather - 현재 기후
+      $.getJSON(
+        "https://api.openweathermap.org/data/2.5/weather?id=1835848&appid=7135cfc6a8989754bea0259d02428674&units=metric",
+        function (data) {
+          //   alert(data.cod);
+          //   alert(data.list[0].main.temp_max);
+          var $cTemp = data.main.temp;
+          var $maxTemp = data.main.temp_max;
+          var $minTemp = data.main.temp_min;
+          var $cDate = data.dt_txt;
+          var $wIcon = data.weather[0].icon;
+
+          $(".ctemp").append($cTemp);
+          $(".clowtemp").append($minTemp);
+          $(".chightemp").append($maxTemp); // 뒤에 추가
+
+          //https://openweathermap.org/weather-conditions - 아이콘 주소
+          $(".cicon").append(
+            `<img src="http://openweathermap.org/img/wn/${$wIcon}@2x.png">`
+          );
+
+          $("h2").prepend($cDate); // 앞에 추가
+        }
+      );
+    </script>
+  </head>
+  <body>
+    <h1>Weather api</h1>
+    <h2>날씨 예보</h2>
+    <div class="ctemp">현재 온도:</div>
+    <div class="clowtemp">최저 온도:</div>
+    <div class="chightemp">최고 온도:</div>
+    <div class="cicon">아이콘:</div>
+  </body>
+</html>
+<!-- 날씨 api 사이트
+http://openweathermap.org/
+
+Sign in 가입
+api key 탭을 눌러서 키 값을 복사한다.
+079b8942e0b5aa9292436aca492ee8f0
+
+하단 푸터에 how to start 클릭
+
+Example on how to make an API call using your API key 밑에 사용 방법
+
+http://api.openweathermap.org/data/2.5/forecast?id=524901&appid={API key}
+
+
+id =  524901 
+id뒤에 있는 숫자는 도시코드
+도시코드를 얻어와야됨
+서울 - 또는 광주 - 성남
+
+
+http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=079b8942e0b5aa9292436aca492ee8f0
+
+메인화면 - 돋보기(검색창) - weather in your city      placeholder로 써진부분에
+seoul 이고 타이핑후 검색버튼 클릭 
+검색된 서울을 클릭하면  서울 날씨 예보를 알 수 있으며
+
+상단 주소표시줄에  
+1835848 - 서울에 도시코드가 된다.
+https://openweathermap.org/city/1835848
+
+
+도시코드부분을 서울도시코드 1835848 로 수정한후
+https://api.openweathermap.org/data/2.5/forecast?id=1835848&appid=079b8942e0b5aa9292436aca492ee8f0
+복사하여
+구글 주소창 검색
+json 데이터가 나온다.
+ctrl + a 모두 선택한후 ctrl + c 복사 해서
+vscode에 와서 ctrl + v 한다.
+ctrl + k + f 자동을 코드 정렬
+
+var array = [1,2,3,4]
+array[0] = 1;
+
+var arrry1 = [{temp:value, temp_min:value},{temp:value,temp_min:value}]
+
+출력되 나온온도는 Kelvin 온도입니다.
+
+297.96
+
+메뉴 - api -  Parameters of API reponse - json
+ - Units of measurement
+
+
+기본은 kelvin
+&units=metric  뒤 붙인다.  (섭씨)
+
+&units=imperial(화씨)
+
+
+https://api.openweathermap.org/data/2.5/forecast?id=1835848&appid=079b8942e0b5aa9292436aca492ee8f0&units=metric
+ -->
