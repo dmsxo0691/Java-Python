@@ -26,7 +26,6 @@
           var $cTemp = data.main.temp;
           var $maxTemp = data.main.temp_max;
           var $minTemp = data.main.temp_min;
-          var $cDate = data.dt_txt;
           var $wIcon = data.weather[0].icon;
 
           $(".ctemp").append($cTemp);
@@ -39,6 +38,17 @@
           );
 
           $("h2").prepend($cDate); // 앞에 추가
+          var $now = new Date();
+          var $cDate =
+            $now.getFullYear() +
+            "/" +
+            ($now.getMonth() + 1) +
+            "/" +
+            $now.getDate() +
+            " " +
+            $now.getHours() +
+            " : " +
+            $new.getMinutes();
         }
       );
     </script>
