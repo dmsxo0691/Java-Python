@@ -9,6 +9,11 @@ $(function () {
     var sct = $(this).scrollTop(); //스크롤 위치값을 sct에 저장
     $("#Stop").text(sct);
     //   위 행과 동일 document.getElementById(Stop).innerHTML = sct;
+    if (sct >= 100) {
+      $("nav").addClass("fixed");
+    } else {
+      $("nav").removeClass("fixed");
+    }
     if (sct >= 450) {
       $(".left1").addClass("on");
     }
