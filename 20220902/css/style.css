@@ -97,7 +97,7 @@ nav ul li a {
   color: white;
   text-align: center;
 }
-nav ul li.on {
+nav ul li.on a {
   color: orange;
 }
 .left1 {
