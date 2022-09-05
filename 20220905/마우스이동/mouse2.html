@@ -5,19 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script>
+      document.onmousemove = function (e) {
+        var theEvent = e ? e : window.event;
+        //조건 ? 참:거짓 - explorer8이하에서 객체생성
+        var x = theEvent.clientX; //마우스 x좌표
+        var y = theEvent.clientY; //마우스 y좌표
+        document.getElementById("m1"), (innerHTML = x);
+        document.getElementById("m2"), (innerHTML = y);
+      };
+    </script>
     <style>
       #warp {
-        width: 150px;
-        height: 150px;
-        background-color: red;
-        cursor: url(images/mouse_img_32.png), auto;
+        position: fixed;
       }
-      #warp:active {
-        cursor: url(images/mouse_img_128.png), auto;
+      body {
+        height: 3000px;
       }
     </style>
   </head>
   <body>
-    <div id="warp"></div>
+    <div id="warp">
+      <div id="m1">0000</div>
+      <div id="m2">0000</div>
+    </div>
   </body>
 </html>
