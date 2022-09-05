@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
     <script>
-      document.onmousemove = function (e) {
-        var theEvent = e ? e : window.event;
-        //조건 ? 참:거짓 - explorer8이하에서 객체생성
-        var x = theEvent.clientX; //마우스 x좌표
-        var y = theEvent.clientY; //마우스 y좌표
-        document.getElementById("m1").innerHTML = x;
-        document.getElementById("m2").innerHTML = y;
-      };
+      $(function () {
+        $(window).mousemove(function (e) {
+          var x = e.pageX;
+          var y = e.pageY;
+          $("#m1").text(x);
+          $("#m2").text(y);
+        });
+      });
     </script>
     <style>
       #warp {
