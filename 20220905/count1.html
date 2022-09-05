@@ -8,12 +8,14 @@
     <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
     <script>
       $(function () {
+        var number = $("#num").text(); // #num 의 내용을 읽어서 number에 대입
         $({ percent: 0 }).animate(
-          { percent: 111 },
+          { percent: 75 },
           {
             duration: 3000,
             progress: function () {
               var now = this.percent;
+              $(".bar_in").css("width", now + "%");
               $("#num").text(Math.floor(now));
             },
           }
