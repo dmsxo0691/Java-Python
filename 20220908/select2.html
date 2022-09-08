@@ -8,7 +8,7 @@
     <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
     <script>
       $(function () {
-        $("form[name = rel_f]").on("submit", function () {
+        $("form[name = rel_f]").on("change", function () {
           var url = $("select", this).val(); // 클릭한 option의 value값 추출 url 저장
           window.open(url);
           return false;
@@ -25,11 +25,6 @@
           <option value="http://nanet.go.kr">국회 도서관</option>
           <option value="http://dlibrary.go.kr">국가 전자 도서관</option>
         </select>
-        <input
-          type="image"
-          src="image/rel_site_btn.gif"
-          alt="관련사이트 이동"
-        />
       </fieldset>
     </form>
   </body>
