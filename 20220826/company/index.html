@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body id="myPage" data-spa="scroll" data-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#myPage">Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#pricing">PRICING</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="jumbotron text-center">
+      <h1>Company</h1>
+      <p>we specialize in blablabla</p>
+      <form class="form-inline">
+        <div class="input-group">
+          <input
+            type="email"
+            class="form-control"
+            size="50"
+            placeholder="Email Address"
+            required
+          />
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-danger">Subscribe</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div id="about" class="container-fluid">
+      <div class="row">
+        <div class="col-sm-8">
+          <h2>About Company Page</h2>
+          <h4>Lorem ipsum...</h4>
+          <p>Lorem ipsum....</p>
+          <button class="btn btn-default btn-lg">Get in Touch</button>
+        </div>
+        <div class="col-sm-4">
+          <span class="glyphicon glyphicon-signal logo"></span>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid bg-gray">
+      <div class="row">
+        <div class="col-sm-4">
+          <span class="glyphicon glyphicon-globe logo slideanim"></span>
+        </div>
+        <div class="col-sm-8">
+          <h2>Our Values</h2>
+          <h4><strong>MISSION:</strong> Our mission lorem ipsum..</h4>
+          <p><strong>VISION:</strong> Our vision Lorem ipsum..</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="services" class="container-fluid text-center">
+      <h2>SERVICES</h2>
+      <h4>What we offer</h4>
+      <br />
+      <div class="row slideanim">
+        <div class="col-sm-4">
+          <span class="glyphicon glyphicon-off logo-small"></span>
+          <h4>POWER</h4>
+          <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+        <div class="col-sm-4">
+          <span class="glyphicon glyphicon-heart logo-small"></span>
+          <h4>LOVE</h4>
+          <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+        <div class="col-sm-4">
+          <span class="glyphicon glyphicon-lock logo-small"></span>
+          <h4>JOB DONE</h4>
+          <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+      </div>
+      <div class="row slideanim">
+        <div class="col-sm-4">
+          <span class="glyphicon glyphicon-leaf logo-small"></span>
+          <h4>GREEN</h4>
+          <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+        <div class="col-sm-4">
+          <span class="glyphicon glyphicon-certificate logo-small"></span>
+          <h4>CERTIFIED</h4>
+          <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+        <div class="col-sm-4">
+          <span class="glyphicon glyphicon-wrench logo-small"></span>
+          <h4 style="color: #303030">HARD WORK</h4>
+          <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="portfolio" class="container-fluid text-center bg-gray">
+      <h2>Portfolio</h2>
+      <h4>What we have created</h4>
+      <div class="row text-center slideanim">
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="paris.jpg" alt="paris" width="400" height="300" />
+            <p><strong>Paris</strong></p>
+            <p>Yes, We built Paris</p>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="sanfran.jpg" alt="sanfran" width="400" height="300" />
+            <p><strong>San francisco</strong></p>
+            <p>Yes, San Fran is ours</p>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="newyork.jpg" alt="newyork" width="400" height="300" />
+            <p><strong>New York</strong></p>
+            <p>Yes, We built New York</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>Whar out customers say</h2>
+      <div
+        id="myCarousel"
+        class="carousel slide text-center"
+        data-ride="carousel"
+      >
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <h4>
+              "This company is the best. I am so happy with the result!"<br /><span
+                >Michael Roe, Vice President, Comment Box</span
+              >
+            </h4>
+          </div>
+
+          <div class="item">
+            <h4>
+              "One word... WOW!!"<br /><span>John Doe, Salesman, Rep Inc</span>
+            </h4>
+          </div>
+
+          <div class="item">
+            <h4>
+              "Could I... BE any more happy with this company?"<br /><span
+                >Chandler Bing, Actor, FriendsAlot</span
+              >
+            </h4>
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+    <div id="pricing" class="container-fluid">
+      <div class="text-center">
+        <h2>Pricing</h2>
+        <h4>Choose a payment plan that works for you</h4>
+      </div>
+      <div class="row slideanim">
+        <div class="col-sm-4 col-sx-12">
+          <div class="panel panel-default text-center">
+            <div class="paner-heading">
+              <h1>Basic</h1>
+            </div>
+            <div class="panel-body">
+              <p><strong>20</strong> Lorem</p>
+              <p><strong>15</strong> Ipsum</p>
+              <p><strong>5</strong> Dolor</p>
+              <p><strong>2</strong> Sit</p>
+              <p><strong>Endless</strong> Amet</p>
+            </div>
+            <div class="panel-footer">
+              <h3>$19</h3>
+              <h4>per month</h4>
+              <button class="btn btn-lg">Sign Up</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 col-sx-12">
+          <div class="panel panel-default text-center">
+            <div class="paner-heading">
+              <h1>Pro</h1>
+            </div>
+            <div class="panel-body">
+              <p><strong>50</strong> Lorem</p>
+              <p><strong>25</strong> Ipsum</p>
+              <p><strong>10</strong> Dolor</p>
+              <p><strong>5</strong> Sit</p>
+              <p><strong>Endless</strong> Amet</p>
+            </div>
+            <div class="panel-footer">
+              <h3>$29</h3>
+              <h4>per month</h4>
+              <button class="btn btn-lg">Sign Up</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 col-sx-12">
+          <div class="panel panel-default text-center">
+            <div class="paner-heading">
+              <h1>Premium</h1>
+            </div>
+            <div class="panel-body">
+              <p><strong>100</strong> Lorem</p>
+              <p><strong>50</strong> Ipsum</p>
+              <p><strong>25</strong> Dolor</p>
+              <p><strong>10</strong> Sit</p>
+              <p><strong>Endless</strong> Amet</p>
+            </div>
+            <div class="panel-footer">
+              <h3>$39</h3>
+              <h4>per month</h4>
+              <button class="btn btn-lg">Sign Up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact" class="container-fluid bg-gray">
+      <h2 class="text-center">CONTACT</h2>
+      <div class="row slideanim">
+        <div class="col-sm-5">
+          <p>Contact us and we'll get back to you with in 24 hours</p>
+          <p><span class="glyphicon glyphicon-map-maker"></span>Chicago, Us</p>
+          <p><span class="glyphicon glyphicon-phone"></span>++ 1151512515</p>
+          <p>
+            <span class="glyphicon glyphicon-envelope"></span>
+            myemail@something.com
+          </p>
+        </div>
+        <div class="col-sm-7">
+          <div class="row">
+            <div class="col-sm-6 form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder="name"
+                required
+              />
+            </div>
+            <div class="col-sm-6 form-group">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="email"
+                required
+              />
+            </div>
+          </div>
+          <textarea
+            class="form-control"
+            name="comments"
+            id="domments"
+            rows="5"
+            placeholder="comments"
+          ></textarea>
+          <div class="row">
+            <div class="col-sm-12 form-group">
+              <button class="btn btn-default pull-right" type="submit">
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="map" style="width: 100%; height: 400px"></div>
+
+    <script
+      type="text/javascript"
+      src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=86c1bc051a0d5c28723e56f4a60773b0"
+    ></script>
+    <script>
+      var mapContainer = document.getElementById("map"), // 지도를 표시할 div
+        mapOption = {
+          center: new kakao.maps.LatLng(37.538607, 127.141346), // 지도의 중심좌표
+          level: 3, // 지도의 확대 레벨
+        };
+
+      var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+      // 마커가 표시될 위치입니다
+      var markerPosition = new kakao.maps.LatLng(37.538607, 127.141346);
+
+      // 마커를 생성합니다
+      var marker = new kakao.maps.Marker({
+        position: markerPosition,
+      });
+
+      // 마커가 지도 위에 표시되도록 설정합니다
+      marker.setMap(map);
+
+      // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+      // marker.setMap(null);
+    </script>
+    <footer class="container-fruid text-center">
+      <a href="#myPage" title="ToTop">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+      </a>
+      <p>Bootstrap theme Made by <a href="#" title="Visit kangNamit"></a></p>
+    </footer>
+    <script>
+      $(".navbar a").click(function () {
+        var hash = this.hash;
+        // alert(hash); a href = 의 값을 구해준다
+        $("html,body").animate({ scrollTop: $(hash).offset().top }, 900);
+        return false;
+      });
+      $(window).scroll(function () {
+        $(".slideanim").each(function () {
+          var pos = $(this).offset().top;
+          // console.log(pos);
+          var sct = $(window).scrollTop();
+          if (pos < sct + 600) {
+            $(this).addClass("slide");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -9,8 +9,33 @@
       rel="stylesheet"
     />
     <title>Adidas</title>
+    <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
     <link rel="stylesheet" href="css/888.css" />
     <script src="js/prefixfree.min.js"></script>
+    <script>
+      $(function () {
+        $("#gnb li ul").hide();
+        $("#gnb li:eq(0) ul").show();
+        $("#gnb > li > a").click(function () {
+          var kkk = $(this).next("#gnb > li > ul").css("display");
+          if (kkk == "none") {
+            $("#gnb > li > ul").slideUp();
+            $(this).next("#gnb > li > ul").slideDown();
+          } else {
+            $("#gnb > li > ul").slideUp();
+          }
+          return false;
+        });
+        $("#side").click(function () {
+          var kkk = $(this).hasClass("on");
+          if (kkk == true) {
+            $(this).addClass("on");
+          } else {
+            $(this).removeClass("on");
+          }
+        });
+      });
+    </script>
   </head>
   <body>
     <figure class="vid">
@@ -24,87 +49,67 @@
       </a>
     </h1>
     <header>
-      <ul id="gnd">
+      <ul id="gnb">
         <li class="on">
           <a href="#"><em>HOME</em></a>
         </li>
-        <li class="on">
+        <li>
           <a href="#"><em>COMPANY</em></a>
           <ul>
             <li>
               <a href="#"><em>PROFILE</em></a>
             </li>
-          </ul>
-          <ul>
             <li>
               <a href="#"><em>STRATEGY</em></a>
             </li>
-          </ul>
-          <ul>
             <li>
               <a href="#"><em>CLUTURE</em></a>
             </li>
-          </ul>
-          <ul>
             <li>
               <a href="#"><em>HISTORY</em></a>
             </li>
-          </ul>
-          <ul>
             <li>
               <a href="#"><em>CONTACT</em></a>
             </li>
           </ul>
         </li>
-        <li class="on">
+        <li>
           <a href="#"><em>BRANDS</em></a>
           <ul>
             <li>
               <a href="#"><em>ADIDAS</em></a>
             </li>
-          </ul>
-          <ul>
             <li>
               <a href="#"><em>REEBOK</em></a>
             </li>
           </ul>
         </li>
-        <li class="on">
+        <li>
           <a href="#"><em>SUSTAINABILITY</em></a>
           <ul>
             <li>
               <a href="#"><em>COMPLAIANCE</em></a>
             </li>
-          </ul>
-          <ul>
             <li>
               <a href="#"><em>PRODUCTS</em></a>
             </li>
-          </ul>
-          <ul>
             <li>
               <a href="#"><em>PEOPLE</em></a>
             </li>
-          </ul>
-          <ul>
             <li>
               <a href="#"><em>POLICIES</em></a>
             </li>
-          </ul>
-          <ul>
             <li>
               <a href="#"><em>CONTACT</em></a>
             </li>
           </ul>
         </li>
-        <li class="on">
+        <li>
           <a href="#"><em>CAREERS</em></a>
           <ul>
             <li>
               <a href="#"><em>OUR OFFER</em></a>
             </li>
-          </ul>
-          <ul>
             <li>
               <a href="#"><em>FOOT PRINT</em></a>
             </li>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+      $(function () {
+        var count = 0;
+        var text1 = $("#text");
+        var msg;
+        var comp;
+        var kkk;
+        main();
+        function main() {
+          msg = text1.text(); // #text1글자를 msg에대입
+          //alert(msg);
+          comp = msg.length; // 글자의 갯수
+          //alert(comp);  //   48
+          tatata();
+        }
+
+        function tatata() {
+          if (count <= comp) {
+            kkk = msg.substring(0, count);
+            // msg.substring(indexstart[, indexend])
+            //str.substr(start[, length])
+
+            text1.text(kkk);
+            count++;
+            setTimeout(tatata, 100);
+            //setTimeout(tatata,100); 0.1 지난후 tatata를 한번 실행
+            //0.1초마다 tatata 함수를 부른다.(재귀함수)
+          } else {
+            count = 0;
+            main();
+          }
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <h1 id="text">
+      타이핑 효과를 좀 해봐요 타다다다... 그런데 은태 언제온다니??
+    </h1>
+  </body>
+</html>

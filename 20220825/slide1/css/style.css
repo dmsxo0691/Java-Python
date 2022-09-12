@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+header {
+  width: 800px;
+  height: 200px;
+  background-color: tan;
+  margin: 0 auto;
+}
+.img_slide {
+  width: 800px;
+  height: 350px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.img_slide li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
