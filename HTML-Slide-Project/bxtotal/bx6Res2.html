@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery.bxslider.css" />
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        width: 100%;
+        max-width: 960px;
+        height: 200px;
+        margin: 0 auto;
+        background-color: pink;
+      }
+
+      section {
+        width: 100%;
+        max-width: 960px;
+        height: 800px;
+        margin: 0 auto;
+        border: 1px solid red;
+      }
+    </style>
+    ]
+    <script>
+      $(function () {
+        $(".bx4").bxSlider({
+          auto: true,
+          moveSlides: 1,
+          minSlides: 1,
+          maxSlides: 3,
+          slideWidth: 305,
+          slideMargin: 10,
+          shrinkItems: true,
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header>헤더</header>
+    <section>
+      <ul class="bx4">
+        <li>
+          <img src="img/w1.JPG" alt="사진11" title="메인사진1 <br/> 두줄" />
+        </li>
+        <li><img src="img/w2.JPG" alt="사진22" title="메인사진2" /></li>
+        <li><img src="img/w3.JPG" alt="사진33" title="메인사진3" /></li>
+        <li><img src="img/w4.JPG" alt="사진44" title="메인사진4" /></li>
+        <li><img src="img/w5.JPG" alt="사진55" title="메인사진5" /></li>
+      </ul>
+    </section>
+  </body>
+</html>
