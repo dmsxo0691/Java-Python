@@ -9,11 +9,7 @@ a {
   text-decoration: none;
   color: #333;
 }
-.cf:after {
-  content: "";
-  display: block;
-  clear: both;
-}
+
 .header_out {
   width: 100%;
   height: 250px;
