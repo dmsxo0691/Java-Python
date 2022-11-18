@@ -23,7 +23,16 @@ $(function () {
   var a2 = $(".s2_title h2").offset().top; // 제목
   var a3 = $(".s2_title p").offset().top; // 내용
   var a4 = $(".s2_table li").offset().top; //사각박스
-  console.log(a1, a2, a3, a4);
+
+  var a5 = $(".s3_title img").offset().top;
+  var a6 = $(".s3_title h2").offset().top;
+  var a7 = $(".s3_title p").offset().top;
+  var a8 = $(".s3_table li").offset().top;
+
+  var a9 = $(".s4_title img").offset().top;
+  var a10 = $(".s4_title h2").offset().top;
+  var a11 = $(".s4_title p").offset().top;
+  var a12 = $(".s4_table li").offset().top;
 
   $(window).scroll(function () {
     var sct = $(this).scrollTop(); //스크롤의 위치값
@@ -46,6 +55,53 @@ $(function () {
       }, 400);
       setTimeout(function () {
         $(".s2_table li").eq(3).addClass("slide");
+      }, 600);
+    }
+
+    if (a5 < sct + 700) {
+      $(".s3_title img").addClass("slide");
+    }
+    if (a6 < sct + 700) {
+      $(".s3_title h2").addClass("slide");
+    }
+    if (a7 < sct + 700) {
+      $(".s3_title p").addClass("slide");
+    }
+    if (a8 < sct + 700) {
+      $(".s3_table li").eq(0).addClass("slide");
+      setTimeout(function () {
+        $(".s3_table li").eq(1).addClass("slide");
+      }, 200);
+      setTimeout(function () {
+        $(".s3_table li").eq(2).addClass("slide");
+      }, 400);
+      setTimeout(function () {
+        $(".s3_table li").eq(3).addClass("slide");
+      }, 600);
+      setTimeout(function () {
+        $(".s3_table li").eq(4).addClass("slide");
+      }, 800);
+    }
+
+    if (a9 < sct + 700) {
+      $(".s4_title img").addClass("slide");
+    }
+    if (a10 < sct + 700) {
+      $(".s4_title h2").addClass("slide");
+    }
+    if (a11 < sct + 700) {
+      $(".s4_title p").addClass("slide");
+    }
+    if (a12 < sct + 700) {
+      $(".s4_table li").eq(0).addClass("slide");
+      setTimeout(function () {
+        $(".s4_table li").eq(1).addClass("slide");
+      }, 200);
+      setTimeout(function () {
+        $(".s4_table li").eq(2).addClass("slide");
+      }, 400);
+      setTimeout(function () {
+        $(".s4_table li").eq(3).addClass("slide");
       }, 600);
     }
   });
