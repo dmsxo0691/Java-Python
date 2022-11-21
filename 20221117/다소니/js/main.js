@@ -34,6 +34,9 @@ $(function () {
   var a11 = $(".s4_title p").offset().top;
   var a12 = $(".s4_table li").offset().top;
 
+  var b1 = $("#s5").offset().top;
+  var b2 = $("#s6").offset().top;
+
   $(window).scroll(function () {
     var sct = $(this).scrollTop(); //스크롤의 위치값
     if (a1 < sct + 700) {
@@ -103,6 +106,13 @@ $(function () {
       setTimeout(function () {
         $(".s4_table li").eq(3).addClass("slide");
       }, 600);
+    }
+
+    if (b1 < sct + 700) {
+      $(".s5_contents").addClass("slide1");
+    }
+    if (b2 < sct + 700) {
+      $(".s6_noti, .s6_review").addClass("slide1");
     }
   });
 });
