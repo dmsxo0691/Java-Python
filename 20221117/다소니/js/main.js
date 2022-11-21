@@ -36,9 +36,15 @@ $(function () {
 
   var b1 = $("#s5").offset().top;
   var b2 = $("#s6").offset().top;
+  var f_box = $(".fix_box").offset().top;
 
   $(window).scroll(function () {
     var sct = $(this).scrollTop(); //스크롤의 위치값
+
+    $(".fix_box")
+      .stop()
+      .animate({ top: sct + f_box }, 500);
+
     if (a1 < sct + 700) {
       $(".s2_title img").addClass("slide");
     }
@@ -114,5 +120,20 @@ $(function () {
     if (b2 < sct + 700) {
       $(".s6_noti, .s6_review").addClass("slide1");
     }
+  });
+
+  $(".popup1").draggable();
+
+  if ($.cookie("pop") == "none") {
+    $(".popup1").hide();
+  }
+
+  $(".btn2").click(function () {
+    $(".popup1").fadeOut("fast");
+  });
+
+  $(".btn1").click(function () {
+    $.cookie("pop", "none", { expires: 1 });
+    $(".popup1").fadeOut("fast");
   });
 });

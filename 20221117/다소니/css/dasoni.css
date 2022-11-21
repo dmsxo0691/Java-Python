@@ -682,3 +682,70 @@ footer {
   background: url(../img/sns_icon3.png) no-repeat 50% 50%;
   margin-right: 0;
 }
+
+.fix_box {
+  width: 75px;
+  position: absolute;
+  left: 50%;
+  margin-left: 550px;
+  top: 400px;
+  z-index: 99;
+}
+.fix_box li a {
+  display: block;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.fix_box a.fix_talk {
+  background: #d46f5d url(../img/q_icon.png) no-repeat 50% 50%;
+}
+.fix_box a.fix_phone {
+  background: #d46f5d url(../img/q_icon2.png) no-repeat 50% 50%;
+}
+.fix_box a.fix_clock {
+  background: #d46f5d url(../img/q_icon3.png) no-repeat 50% 50%;
+}
+
+.popup1 {
+  width: 400px;
+  height: 442px;
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  z-index: 999;
+}
+.pop_top1 {
+  width: 400px;
+  height: 400px;
+}
+.pop_top1 img {
+  display: block;
+  width: 100%;
+  background-color: #000;
+}
+
+.pop_bom1 {
+  width: 400px;
+  height: 42px;
+  background-color: #000;
+  color: #fff;
+}
+.pop_bom1 p span.btn1 {
+  height: 42px;
+  float: left;
+  line-height: 42px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.pop_bom1 p span.btn2 {
+  height: 40px;
+  float: right;
+  line-height: 40px;
+  font-weight: bold;
+  box-sizing: border-box;
+  padding: 0 10px;
+  background-color: #999;
+  margin-right: 10px;
+}
